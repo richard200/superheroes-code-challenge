@@ -2,9 +2,9 @@ class HeroPowersController < ApplicationController
     def create 
         hero_power = HeroPower.create!(hero_power_params)
         if hero_power
-            render json: hero_power, status: :created
+            render json: hero_power, serializer: HeroAndPowersSerializer
         else 
-            render json: {message: "validation errors"}, status: 404
+            render json: {message: "validation errors"}, status: :not_found
         end
 
     end
