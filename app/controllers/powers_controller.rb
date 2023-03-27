@@ -20,9 +20,6 @@ class PowersController < ApplicationController
         render json: power, {message: 'Updated description'}
         else 
             render json: {message: 'Power not found'}, status: :not_found
-        else 
-            render json: {message: 'validation errors'}, status: 404
-        end
         end
 
     end
