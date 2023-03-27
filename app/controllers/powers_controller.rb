@@ -9,7 +9,7 @@ class PowersController < ApplicationController
         if power 
             render json: power, status: :success
         else 
-            render json: {message: 'Power not found'}, status: :not_found
+            render json: {error: 'Power not found'}, status: :not_found
         end
     end
 
@@ -17,9 +17,9 @@ class PowersController < ApplicationController
         power = Powers.find_by(id: params[:id])
         if power
         power.update!(power_params)
-        render json: power, {message: 'Updated description'}
+        render json: power
         else 
-            render json: {message: 'Power not found'}, status: :not_found
+            render json: {error: 'Power not found'}, status: :not_found
         end
 
     end

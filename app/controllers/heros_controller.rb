@@ -9,7 +9,7 @@ class HerosController < ApplicationController
         if hero 
         render json: hero, serializer: HeroAndPowersSerializer, status: 200
         else 
-            render json: {message: 'Hero not found', status: :not_found}
+            render json: {error: 'Hero not found', status: :not_found}
         end
     end
 

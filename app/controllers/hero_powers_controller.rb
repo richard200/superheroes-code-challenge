@@ -4,7 +4,7 @@ class HeroPowersController < ApplicationController
         if hero_power
             render json: hero_power, serializer: HeroAndPowersSerializer
         else 
-            render json: {message: "validation errors"}, status: :not_found
+            render json: {error: "validation errors"}, status: :not_found
         end
 
     end
