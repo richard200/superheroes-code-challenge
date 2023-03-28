@@ -78,7 +78,7 @@ This application is a simple web API that allows users to:
 | updatedAt     | Date                                            | The date the association was updated|
 
 ### ROUTES
-1. GET /heroes
+1. GET /heros
 Return JSON data in the format below:
 
 [  
@@ -91,7 +91,7 @@ Return JSON data in the format below:
 
 ]
    ```
-2. GET /heroes/:id
+2. GET /heros/:id
 If the `Hero` exists, return JSON data in the format below:
 
 
