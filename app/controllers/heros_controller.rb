@@ -1,11 +1,11 @@
 class HerosController < ApplicationController
     def index 
-        heros = Heros.all
+        heros = Hero.all
         render json: heros, status: 200
     end
 
     def show 
-        hero = Heros.find_by(id: params[:id])
+        hero = Hero.find_by(id: params[:id])
         if hero 
         render json: hero, serializer: HeroAndPowersSerializer, status: 200
         else 

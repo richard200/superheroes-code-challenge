@@ -1,11 +1,11 @@
 class PowersController < ApplicationController
     def index 
-        power = Powers.all 
-        render json: power, status: :success
+        power = Power.all 
+        render json: power, status: 200
     end
 
     def show 
-        power = Powers.find_by(id: params[:id])
+        power = Power.find_by(id: params[:id])
         if power 
             render json: power, status: :success
         else 
@@ -14,7 +14,7 @@ class PowersController < ApplicationController
     end
 
     def update 
-        power = Powers.find_by(id: params[:id])
+        power = Power.find_by(id: params[:id])
         if power
         power.update!(power_params)
         render json: power
